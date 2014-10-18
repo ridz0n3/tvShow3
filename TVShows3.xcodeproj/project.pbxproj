@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58134CC46BF3F312E3B1DE78 /* libPods-TVShows3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD535C6B49569747D81F558 /* libPods-TVShows3.a */; };
+		7E44E8CD19F25C7800E67022 /* TVListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E44E8CC19F25C7800E67022 /* TVListTableViewController.m */; };
 		7E940A9A19F25A490098C4E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E940A9919F25A490098C4E9 /* main.m */; };
 		7E940A9D19F25A490098C4E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E940A9C19F25A490098C4E9 /* AppDelegate.m */; };
 		7E940AA019F25A490098C4E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E940A9F19F25A490098C4E9 /* ViewController.m */; };
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4DD535C6B49569747D81F558 /* libPods-TVShows3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TVShows3.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E44E8CB19F25C7800E67022 /* TVListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVListTableViewController.h; sourceTree = "<group>"; };
+		7E44E8CC19F25C7800E67022 /* TVListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVListTableViewController.m; sourceTree = "<group>"; };
 		7E940A9419F25A490098C4E9 /* TVShows3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShows3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E940A9819F25A490098C4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E940A9919F25A490098C4E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +45,8 @@
 		7E940AAD19F25A490098C4E9 /* TVShows3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVShows3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E940AB219F25A490098C4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E940AB319F25A490098C4E9 /* TVShows3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVShows3Tests.m; sourceTree = "<group>"; };
+		A4C8237F2C36ED3EFA9E3F78 /* Pods-TVShows3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShows3.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVShows3/Pods-TVShows3.release.xcconfig"; sourceTree = "<group>"; };
+		D54D9E44E613D7C1CEB1E983 /* Pods-TVShows3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShows3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVShows3/Pods-TVShows3.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58134CC46BF3F312E3B1DE78 /* libPods-TVShows3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +68,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B254FAD2CD35F5DF0B6592B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D54D9E44E613D7C1CEB1E983 /* Pods-TVShows3.debug.xcconfig */,
+				A4C8237F2C36ED3EFA9E3F78 /* Pods-TVShows3.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		297CC2A92036399C394AF769 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DD535C6B49569747D81F558 /* libPods-TVShows3.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7E940A8B19F25A490098C4E9 = {
 			isa = PBXGroup;
 			children = (
 				7E940A9619F25A490098C4E9 /* TVShows3 */,
 				7E940AB019F25A490098C4E9 /* TVShows3Tests */,
 				7E940A9519F25A490098C4E9 /* Products */,
+				0B254FAD2CD35F5DF0B6592B /* Pods */,
+				297CC2A92036399C394AF769 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +113,8 @@
 				7E940A9E19F25A490098C4E9 /* ViewController.h */,
 				7E940A9F19F25A490098C4E9 /* ViewController.m */,
 				7E940AA119F25A490098C4E9 /* Main.storyboard */,
+				7E44E8CB19F25C7800E67022 /* TVListTableViewController.h */,
+				7E44E8CC19F25C7800E67022 /* TVListTableViewController.m */,
 				7E940AA419F25A490098C4E9 /* Images.xcassets */,
 				7E940AA619F25A490098C4E9 /* LaunchScreen.xib */,
 				7E940A9719F25A490098C4E9 /* Supporting Files */,
@@ -126,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E940AB719F25A490098C4E9 /* Build configuration list for PBXNativeTarget "TVShows3" */;
 			buildPhases = (
+				79109258527B06FD4D465A86 /* Check Pods Manifest.lock */,
 				7E940A9019F25A490098C4E9 /* Sources */,
 				7E940A9119F25A490098C4E9 /* Frameworks */,
 				7E940A9219F25A490098C4E9 /* Resources */,
+				F645832C55E8E879DB83F0C5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,6 +245,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		79109258527B06FD4D465A86 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F645832C55E8E879DB83F0C5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVShows3/Pods-TVShows3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7E940A9019F25A490098C4E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -222,6 +286,7 @@
 				7E940AA019F25A490098C4E9 /* ViewController.m in Sources */,
 				7E940A9D19F25A490098C4E9 /* AppDelegate.m in Sources */,
 				7E940A9A19F25A490098C4E9 /* main.m in Sources */,
+				7E44E8CD19F25C7800E67022 /* TVListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,9 +406,11 @@
 		};
 		7E940AB819F25A490098C4E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D54D9E44E613D7C1CEB1E983 /* Pods-TVShows3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TVShows3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -351,9 +418,11 @@
 		};
 		7E940AB919F25A490098C4E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4C8237F2C36ED3EFA9E3F78 /* Pods-TVShows3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TVShows3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +481,7 @@
 				7E940AB919F25A490098C4E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E940ABA19F25A490098C4E9 /* Build configuration list for PBXNativeTarget "TVShows3Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +490,7 @@
 				7E940ABC19F25A490098C4E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
