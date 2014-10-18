@@ -8,6 +8,10 @@
 
 #import "TVListTableViewController.h"
 #import <SWRevealViewController/SWRevealViewController.h>
+#import "TraktAPIClient.h"
+#import "TVShowsDescription.h"
+#import <AFNetworking/UIKit+AFNetworking.h>
+
 @interface TVListTableViewController ()
 
 @end
@@ -24,6 +28,26 @@
     
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+
+    _arrData = [[NSMutableArray alloc]initWithCapacity:20];
+    [[TraktAPIClient sharedClient] getShowsForUsername:@"wanmuz" date:[NSDate date] Days:3 success:^(NSURLSessionDataTask *sessionTask, id data) {
+        
+        self.jsonResponse = [NSArray arrayWithArray:data];
+        for(NSDictionary* datas in _jsonResponse[0][@"episodes"]){
+            NSLog(@"%@", datas);
+            TVShowsDescription *shows = [[TVShowsDescription alloc]init];
+            
+            shows.Names = datas[@"show"][@"title"];
+            shows.Episode = datas[@"episode"][@"title"];
+            shows.ImageURL = datas[@"episode"][@"images"][@"screen"];
+            shows.Description = datas[@"show"][@"overview"];
+            
+            [_arrData addObject:shows];
+        }
+        [self.tableView reloadData];
+    } failure:^(NSURLSessionDataTask *sessionData, NSError *error) {
+        
+    }];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -42,24 +66,31 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [_arrData count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TVCell" forIndexPath:indexPath];
+    TVShowsDescription *shows = _arrData[indexPath.row];
+    // Configure the cell...
+    // cell.Title = shows.Names;
+    cell.textLabel.text = shows.Names;
+    cell.detailTextLabel.text = shows.Episode;
+    //[cell.imageView setImage
+    [cell.imageView setImageWithURL:[NSURL URLWithString:shows.ImageURL] placeholderImage:[UIImage imageNamed:@"placeholder1.jpg"]];
+
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

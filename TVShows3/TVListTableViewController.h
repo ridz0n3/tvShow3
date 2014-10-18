@@ -10,5 +10,6 @@
 
 @interface TVListTableViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuBarButtonItem;
-
+@property (nonatomic, strong) NSMutableArray *arrData;
+@property (nonatomic, strong) NSArray *jsonResponse;
 @end

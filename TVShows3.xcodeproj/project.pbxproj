@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		58134CC46BF3F312E3B1DE78 /* libPods-TVShows3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD535C6B49569747D81F558 /* libPods-TVShows3.a */; };
 		7E44E8CD19F25C7800E67022 /* TVListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E44E8CC19F25C7800E67022 /* TVListTableViewController.m */; };
+		7E44E8D119F25F1B00E67022 /* TraktAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E44E8D019F25F1B00E67022 /* TraktAPIClient.m */; };
+		7E44E8D619F25FEC00E67022 /* TVShowsDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E44E8D519F25FEC00E67022 /* TVShowsDescription.m */; };
 		7E940A9A19F25A490098C4E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E940A9919F25A490098C4E9 /* main.m */; };
 		7E940A9D19F25A490098C4E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E940A9C19F25A490098C4E9 /* AppDelegate.m */; };
 		7E940AA019F25A490098C4E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E940A9F19F25A490098C4E9 /* ViewController.m */; };
@@ -32,6 +34,10 @@
 		4DD535C6B49569747D81F558 /* libPods-TVShows3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TVShows3.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E44E8CB19F25C7800E67022 /* TVListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVListTableViewController.h; sourceTree = "<group>"; };
 		7E44E8CC19F25C7800E67022 /* TVListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVListTableViewController.m; sourceTree = "<group>"; };
+		7E44E8CF19F25F1B00E67022 /* TraktAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraktAPIClient.h; sourceTree = "<group>"; };
+		7E44E8D019F25F1B00E67022 /* TraktAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TraktAPIClient.m; sourceTree = "<group>"; };
+		7E44E8D419F25FEC00E67022 /* TVShowsDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVShowsDescription.h; sourceTree = "<group>"; };
+		7E44E8D519F25FEC00E67022 /* TVShowsDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVShowsDescription.m; sourceTree = "<group>"; };
 		7E940A9419F25A490098C4E9 /* TVShows3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShows3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E940A9819F25A490098C4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E940A9919F25A490098C4E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +91,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7E44E8CE19F25EE900E67022 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7E44E8CF19F25F1B00E67022 /* TraktAPIClient.h */,
+				7E44E8D019F25F1B00E67022 /* TraktAPIClient.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		7E44E8D219F25FC000E67022 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E44E8D419F25FEC00E67022 /* TVShowsDescription.h */,
+				7E44E8D519F25FEC00E67022 /* TVShowsDescription.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		7E940A8B19F25A490098C4E9 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +132,8 @@
 		7E940A9619F25A490098C4E9 /* TVShows3 */ = {
 			isa = PBXGroup;
 			children = (
+				7E44E8D219F25FC000E67022 /* Model */,
+				7E44E8CE19F25EE900E67022 /* Helper */,
 				7E940A9B19F25A490098C4E9 /* AppDelegate.h */,
 				7E940A9C19F25A490098C4E9 /* AppDelegate.m */,
 				7E940A9E19F25A490098C4E9 /* ViewController.h */,
@@ -284,7 +310,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E940AA019F25A490098C4E9 /* ViewController.m in Sources */,
+				7E44E8D119F25F1B00E67022 /* TraktAPIClient.m in Sources */,
 				7E940A9D19F25A490098C4E9 /* AppDelegate.m in Sources */,
+				7E44E8D619F25FEC00E67022 /* TVShowsDescription.m in Sources */,
 				7E940A9A19F25A490098C4E9 /* main.m in Sources */,
 				7E44E8CD19F25C7800E67022 /* TVListTableViewController.m in Sources */,
 			);
